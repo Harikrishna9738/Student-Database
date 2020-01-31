@@ -20,7 +20,7 @@ sqlparse==0.3.0
 
 Clone the repository
 ```
-https://github.com/Harikrishna9738/CabAllocationSystem
+https://github.com/Harikrishna9738/Student-Database
 ```
 Setting up your virtual environment:
 ```
