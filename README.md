@@ -57,7 +57,7 @@ For Frontend which is ReactJS, Dependencies are:
 ```
 Kindly note redux is not implemented.
 
-Go to 'cabAllocationSystem/frontend/caballocationsystem/' and type the following code in the terminal:
+Go to 'Studentdatabase/student/' and type the following code in the terminal:
 ```
 npm install
 ```
@@ -75,4 +75,4 @@ To make this project following Languages and Libraries have been used:
 
 P.S:The aesthetics of the page is at the most basic level. Some more work could be put in to beautify the UI. The project has been completed keeping the sole aim as working completion rather than aesthetically pleasing.
 
-![alt text](https://github.com/Harikrishna9738/Todo-List/blob/master/screenshots/Screenshot%20from%202020-01-31%2010-17-16.png)
+![alt text](https://github.com/Harikrishna9738/Todo-List/blob/master/screenshots/Screenshot%20from%202020-01-31%2010-44-30.png)
