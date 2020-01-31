@@ -1,11 +1,7 @@
 # Student-Database
 
-## Further Functionalities and Assumptions:
+This project includes student database like firstname lastname and skills and which can be added and deleted by user
 
-    Each Customer can request only one cab at a time.
-    Each driver can accept only one ride at a time.
-    Every ride has 3 status : REQUESTED, ACCEPTED and DONE.
-    Customers and Drivers have unique names.
 
 ## Prerequisites
 
@@ -34,44 +30,9 @@ Activate the Virtual Environment:
 ```
 source .env/bin/activate
 ```
-Set Up a Database on local system: During the Postgres installation, an operating system user named postgres was created to correspond to the postgres PostgreSQL administrative user. We need to change to this user to perform administrative tasks:
-```
-sudo su - postgres
-```
-You should now be in a shell session for the postgres user. Log into a Postgres session by typing:
-```
-psql
-```
-First, we will create a database for our Django project. Each project should have its own isolated database for security reasons. We will call our database myproject in this guide, but it’s always better to select something more descriptive:
-```
-CREATE DATABASE cabsystem;
-```
-Remember to end all commands at an SQL prompt with a semicolon.
 
-Next, we will create a database user which we will use to connect to and interact with the database. Set the password to something strong and secure:
-```
-CREATE USER cabsystemuser WITH PASSWORD 'cabsystem';
-```
-Afterwards, we’ll modify a few of the connection parameters for the user we just created. This will speed up database operations so that the correct values do not have to be queried and set each time a connection is established.
 
-We are setting the default encoding to UTF-8, which Django expects. We are also setting the default transaction isolation scheme to “read committed”, which blocks reads from uncommitted transactions. Lastly, we are setting the timezone. By default, our Django projects will be set to use UTC:
-```
-ALTER ROLE cabsystemuser SET client_encoding TO 'utf8';
-ALTER ROLE cabsystemuser SET default_transaction_isolation TO 'read committed';
-ALTER ROLE cabsystemuser SET timezone TO 'UTC';
-```
-Now, all we need to do is give our database user access rights to the database we created:
-```
-GRANT ALL PRIVILEGES ON DATABASE cabsystem TO cabsystemuser;
-```
-Exit the SQL prompt to get back to the postgres user’s shell session:
-```
-\q
-```
-Exit out of the postgres user’s shell session to get back to your regular user’s shell session:
-```
-exit
-```
+
 After all these steps go to the backend directory(cabAllocationSystem/backend) and there you can find a file called requirement.txt and then type the following code in your terminal:
 ```
 pip install -r requirements.txt
